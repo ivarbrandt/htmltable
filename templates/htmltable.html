@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/htmltable.css') }}">
+    <title>HTML Table</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+        </thead>
+        {% for name in names %}
+        <tr>
+            <td>{{ name['first_name'] }}</td>
+            <td>{{ name['last_name'] }}</td>
+            <td>{{ name['first_name'] }} {{name['last_name'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
